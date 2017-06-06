@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Learning to use Emmet</title>
+  <style>
+    body {
+      background-color: #c0c0c0;
+      font: 16px arial;
+    }
+
+  </style>
+</head>
+<body>
+
+<h1>Lerning to use Emmet</h1>
+
+<p>This is a paragraph</p>
+
+<p class="intro">Intro text</p>
+
+<!-- Child ul>li.item{Item $}*3 -->
+<ul>
+  <li class="item">Item 1</li>
+  <li class="item">Item 2</li>
+  <li class="item">Item 3</li>
+</ul>
+
+<!-- Multiplication p*2>lorem -->
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum rem laborum, delectus totam distinctio voluptatum consectetur exercitationem nihil autem impedit! Mollitia voluptate sunt recusandae eaque enim, modi perspiciatis dolore hic?</p>
+<p>Perspiciatis quo similique enim fuga. Dignissimos placeat dolores praesentium neque eligendi nihil iste, a ut adipisci dolore. Laborum, voluptatem, soluta. Officiis neque sint unde eius harum optio ad laborum ipsa.</p>
+
+<!-- Sibling h1+p -->
+<h1></h1>
+<p></p>
+
+<!-- .wrapper>header>h1^nav -->
+<div class="wrapper">
+  <header>
+    <h1></h1>
+  </header>
+  <nav></nav>
+</div>
+
+<!-- div>(header>ul>li*2>a)+footer -->
+<div>
+  <header>
+    <ul>
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
+    </ul>
+  </header>
+  <footer></footer>
+</div>
+
+<!-- nav>ul>li*>a[href=http://www.$#.com]{$#} -->
+<!-- control-w to wrap -->
+<nav>
+  <ul>
+    <li><a href="http://www.facebook.com">facebook</a></li>
+    <li><a href="http://www.twitter.com">twitter</a></li>
+    <li><a href="http://www.instagram.com">instagram</a></li>
+  </ul>
+</nav>
+
+</body>
+</html>
