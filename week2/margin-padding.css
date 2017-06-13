@@ -1,0 +1,55 @@
+body {
+  font: 16px arial;
+  background-color: #c0c0c0;
+  margin: 0;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: dodgerblue;
+  padding: 2em;
+}
+
+.wrapper h1 {
+  margin-top: 0;
+}
+
+.padding-example {
+  background-color: white;
+  text-align: justify;
+  padding: 1em;
+  border: 1px solid black;
+}
+
+.margin-example {
+  background-color: #fff;
+  border: 1px solid #cc00cc;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+.example {
+  background-color: #00cc00;
+  border: 10px solid black;
+  padding: 1em;
+}
+
+.example p {
+  background-color: tan;
+  margin: 0;
+}
+
+.highlightBox {
+  background-color: white;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+.highlightBox p:first-child {
+  margin-top: 0;
+}
+
+.highlightBox p:last-child {
+  margin-bottom: 0;
+}

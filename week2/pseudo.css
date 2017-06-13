@@ -1,0 +1,32 @@
+a {
+  color: pink;
+  text-decoration: none;
+}
+
+a:link {
+  color: teal;
+}
+
+a:visited {
+  color: lime;
+}
+
+a:hover {
+  color: darkblue;
+  text-decoration: underline;
+}
+
+a:active {
+  color: green;
+}
+
+input {
+  outline: none;
+  width: 100px;
+  transition: all 1s;
+}
+
+input:focus {
+  width: 200px;
+  background-color: dodgerblue;
+}

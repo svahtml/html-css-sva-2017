@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Mogra');
+@import "file-include-2.css";
+
+body {
+  background-color: #c0c0c0;
+}
+
+h1 {
+  color: red;
+  font-family: 'Mogra', cursive;
+}
