@@ -8,7 +8,6 @@ html {
 
 .container {
   width: 800px;
-  display: block;
   margin: 0 auto;
 }
 
@@ -32,3 +31,56 @@ p {
   margin: 1em 0;
   line-height: 1.5em;
 }
+
+.photo {
+  margin: 0;
+  border: 2px solid;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.photo.right {
+  float: right;
+  margin-left: 2em;
+}
+
+.photo.left {
+  float: left;
+  margin-right: 2em;
+}
+
+.photo > img {
+  display: block;
+}
+
+h2 {
+  clear: both;
+}
+
+@media screen and (min-width: 1000px) {
+  .photo.right.break-layout {
+    margin-right: -100px;
+    margin-top: -2em;
+    margin-left: 0;
+    border: none;
+    background-color: #ffffff;
+    padding: 2em;
+    border-radius: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
