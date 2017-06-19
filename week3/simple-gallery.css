@@ -1,0 +1,33 @@
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+html {
+  font: 100% arial;
+  font-family: 'Droid Sans', sans-serif;
+  background-color: #c0c0c0;
+  color: #333;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+
+header {
+  background-color: #cc00ff;
+  padding: 1em;
+}
+
+header h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 0 1px 1px black;
+}
+
+article {  
+  padding: 1em 0 1em 1em;
+}
+
+footer {
+  padding: 1em;
+}

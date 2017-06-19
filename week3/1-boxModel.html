@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Box Model</title>
+	
+	<link rel="stylesheet" href="boxModel.css"/>
+	<style>
+	.box {
+		background: url(http://www.svahtml.com/images/boxModel.gif) repeat-y;
+		height: 600px;
+		padding: 20px 0;
+	}
+	</style>
+	
+</head>
+
+<body>
+	
+<h1>Box Model</h1>
+
+<p>The box model is the way elements sizes are calculated in CSS2.</p>
+
+<p>'desired width' = 'actual width' - ('padding-left' + 'padding-right') - ('border-left-width' + 'border-right-width') - ('margin-left' + 'margin-right')</p>
+
+<div class="box">
+	<div class="box-model">
+		Box Model Example
+	</div>
+	
+	<div class="box-border">
+		Border Box Example
+	</div>
+</div>
+
+</body>
+</html>

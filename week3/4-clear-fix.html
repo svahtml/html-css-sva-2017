@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head>
+	<title>Clear Fix</title>
+	
+	<style>
+	body {
+		font: 14px arial;
+		background-color: #c0c0c0;
+	}
+
+	h1, h2, h3, p, ul, li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	section {
+		background: #fff;
+		padding: 20px;
+		margin: 10px 0;
+	}
+
+	nav {
+		background-color: #a9c4cd;
+		padding: 5px;
+	}
+
+	ul li {
+		background-color: #e1e1e1;
+		border: 1px solid gray;
+		padding: 5px 10px;
+		margin: 5px;
+		float: left;
+	}
+	
+	</style>
+
+</head>
+<body>
+
+<h1>Clear Fix</h1>	
+
+<p>When all the contnet within an element is floated its parent element will not have a height.  This is beause the content that is floated is pulled form the flow there for not occuping any space.</p>
+
+<p>There are a number of ways to fix this isses.  Some good some not so good.</p>
+
+<section>
+	<h2>Add Height</h2>
+	<p>In this example we add a fixed height to the element.</p>
+	<nav class="height">
+		<ul>
+			<li>Item 1</li>
+			<li>Item 2</li>
+			<li>Item 3</li>
+			<li>Item 4</li>
+		</ul>
+	</nav>
+</section>
+
+<section>
+	<h2>Overflow</h2>
+	<p>In this example we add overflow: hidden;</p>
+	<nav class="overflow">
+		<ul>
+			<li>Item 1</li>
+			<li>Item 2</li>
+			<li>Item 3</li>
+			<li>Item 4</li>
+		</ul>
+	</nav>
+</section>
+
+<section>
+	<h2>Add Div</h2>
+	<p>In this example add a div that is then cleared</p>
+	<nav class="add-div">
+		<ul>
+			<li>Item 1</li>
+			<li>Item 2</li>
+			<li>Item 3</li>
+			<li>Item 4</li>
+		</ul>
+		<div class="add-div"></div>
+	</nav>
+</section>
+
+<section>
+	<h2>Clear Fix</h2>
+	<p>In this example we add a pseudo element of after and clear that it.</p>
+	<nav class="clear-fix">
+		<ul>
+			<li>Item 1</li>
+			<li>Item 2</li>
+			<li>Item 3</li>
+			<li>Item 4</li>
+		</ul>
+	</nav>
+</section>
+
+</body>
+</html>
