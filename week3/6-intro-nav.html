@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-\  <title>JS Bin</title>
-  
+  <title>Intro to Nav</title>
+
 <style>
 @import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700);
 html {
@@ -12,10 +12,19 @@ html {
   color: #333;
 }
 
+body, h1, h2, h3, p, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
 .container {
   width: 800px;
-  display: block;
-  margin: 0 auto;
 }
 
 header {
@@ -64,6 +73,56 @@ h2 {
   clear: both;
 }
 
+.global-nav {
+  background-color: #ffcc00;
+}
+
+.global-nav ul {
+  display: flex;
+  /*justify-content: space-between;*/
+  /*align-items: center;
+  height: 200px;*/
+}
+
+.global-nav li {
+  flex-grow: 2;
+}
+
+/*.global-nav li {
+  background: yellowgreen;
+  padding: 1em;
+}
+
+.global-nav li:nth-child(1) {
+  order: 4;
+}
+
+.global-nav li:nth-child(2) {
+  order: 2;
+}
+
+.global-nav li:nth-child(3) {
+  order: 3;
+}
+
+.global-nav li:nth-child(4) {
+  order: 1;
+}*/
+
+
+.global-nav a {
+  text-decoration: none;
+  color: #fff;
+  background-color: deeppink;
+  padding: 1em;
+  display: block;
+}
+
+.global-nav a:hover {
+  background-color: #00ffcc;
+  color: black;
+}
+
 </style>
 </head>
 <body>
@@ -81,9 +140,9 @@ h2 {
     </nav>
     <article>
       <h2>setting up a float</h2>
-      
+
       <figure class="photo right"><img src="http://placehold.it/200/ffcc00/fff.png?text=float" alt=""></figure>
-      
+
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem eaque obcaecati dolores vitae cupiditate ipsum aut, atque vero magnam ad, eos hic odio, laboriosam quasi facere soluta. Odio, maiores, delectus. Veniam, necessitatibus, odit officiis, fuga quisquam quam eaque officia velit reprehenderit tempora debitis quos ipsum dolorem! Optio ducimus laborum modi beatae ab soluta, incidunt, accusantium iste, repudiandae similique saepe dolor veniam est amet cum perspiciatis. Ad porro illo exercitationem, neque, velit expedita molestias autem quidem vitae doloribus qui, corporis blanditiis reprehenderit nobis, impedit recusandae! Animi omnis, ut odit reprehenderit asperiores eligendi nihil molestias quis veritatis aut deserunt sunt, ipsam molestiae?</p>
       <h2>Sub Section</h2>
       <p>Reprehenderit quis accusantium error ducimus, assumenda perferendis molestias magnam, adipisci ipsam, animi quasi beatae delectus, vitae sit. Doloremque illo debitis in tenetur, deleniti dolorem dolor quae dicta, eum vero sed error, officia, eius. Similique illum accusamus unde voluptatum saepe optio quam, sequi dolore voluptates animi molestiae possimus asperiores libero blanditiis soluta atque aspernatur exercitationem. Eveniet excepturi, harum ipsa, ea autem aut soluta, earum distinctio iste provident velit nemo ratione voluptate, nihil voluptatibus dolorum voluptas rem qui. Unde inventore sequi molestiae iusto. Beatae magni veritatis vel minima a, et! Aperiam eligendi, beatae maiores vel! Expedita, repellendus tenetur cumque nesciunt omnis debitis.</p>

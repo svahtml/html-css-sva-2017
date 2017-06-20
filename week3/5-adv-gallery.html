@@ -5,6 +5,11 @@
   <title>Adv Gallery</title>
 <style>
 @import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+
+* {
+  box-sizing: border-box;
+}
+
 html {
   font: 100% arial;
   font-family: 'Droid Sans', sans-serif;
@@ -39,6 +44,17 @@ section {
   border: 1px solid gray;
   padding: 1em;
   margin-bottom: 1em;
+  display: flex;
+}
+
+.photo {
+  flex: 0 0 220px;
+}
+
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 section h2 {
@@ -53,6 +69,10 @@ section p {
   line-height: 1.5em;
 }
 
+.info .info--content {
+  padding: 0;
+}
+
 section button {
   display: block;
   border: none;
@@ -60,6 +80,7 @@ section button {
   padding: .5em 1em;
   background-color: #c0f;
   margin-top: 1em;
+  align-self: flex-end;
 }
 </style>
 </head>
@@ -73,8 +94,10 @@ section button {
         <div class="photo"><img src="http://www.placehold.it/200/ccff00" alt=""></div>
         <div class="info">
           <h2><a href="#">Lorem ipsum dolor.</a></h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum incidunt veniam vitae ducimus, possimus soluta. Aliquid id sit error, pariatur.</p>
-          <p>Itaque non in voluptates, corrupti maiores nobis debitis, quam eaque, doloribus veniam dolores illo accusamus ipsum esse quibusdam, nulla velit.</p>
+          <article class="info--content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum incidunt veniam vitae ducimus, possimus soluta. Aliquid id sit error, pariatur.</p>
+            <p>Itaque non in voluptates, corrupti maiores nobis debitis, quam eaque, doloribus veniam dolores illo accusamus ipsum esse quibusdam, nulla velit.</p>
+          </article>
           <button>View More</button>
         </div>
       </section>
@@ -82,13 +105,15 @@ section button {
         <div class="photo"><img src="http://www.placehold.it/200/ccff00" alt=""></div>
         <div class="info">
           <h2><a href="#">Lorem ipsum dolor.</a></h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum incidunt veniam vitae ducimus, possimus soluta. Aliquid id sit error, pariatur.</p>
-          <p>Itaque non in voluptates, corrupti maiores nobis debitis, quam eaque, doloribus veniam dolores illo accusamus ipsum esse quibusdam, nulla velit.</p>
+          <article class="info--content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum incidunt veniam vitae ducimus, possimus soluta. Aliquid id sit error, pariatur.</p>
+            <p>Itaque non in voluptates, corrupti maiores nobis debitis, quam eaque, doloribus veniam dolores illo accusamus ipsum esse quibusdam, nulla velit.</p>
+          </article>
           <button>View More</button>
         </div>
       </section>
     </article>
   </div>
-  
+
 </body>
 </html>
