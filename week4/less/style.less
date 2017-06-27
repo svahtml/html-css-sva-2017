@@ -2,3 +2,160 @@
 @red: #dc0032;
 @blue: #00add3;
 @import 'https://fonts.googleapis.com/css?family=Cabin&Roboto:100,400';
+
+html, body {
+  height: 100vh;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.layout-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.global {
+  &-header {
+    background-color: @red;
+    .logo {
+      background-color: #fff;
+      padding: 1em;
+      box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+      svg {
+        width: 200px;
+      }
+    }
+  }
+  &-nav {
+    align-self: flex-end;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      li {
+        a {
+          display: block;
+          padding: .5em 1em;
+          font-size: 1rem;
+          color: #fff;
+          &:hover {
+            background-color: @blue;
+            color: #333;
+          }
+        }
+      }
+    }
+  }
+  &-footer {
+    background-color: @gray;
+    color: #fff;
+    padding: 1em;
+    svg {
+      flex: 0 0 200px;
+      margin-right: 100px;
+    }
+    ul {
+      flex: 1;
+      padding: 0;
+      margin-top: 1em;
+      list-style-type: none;
+      a {
+        color: white;
+      }
+    }
+  }
+}
+
+.hero {
+  margin: 0;
+  background: url('../images/art.jpg') center;
+  background-size: cover;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-size: 7rem;
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+    margin: 0;
+  }
+}
+
+.main-content {
+  flex: 1;
+  .layout-row {
+    flex-direction: row-reverse;
+  }
+  .container {
+    padding: 4em;
+  }
+
+  .content {
+    h2 {
+      color: @blue;
+      & + p {
+        font-size: 1.3rem;
+        font-weight: 100;
+      }
+    }
+  }
+
+  .photo {
+    flex: 0 0 30%;
+    margin-left: 5em;
+    margin-top: 10em;
+    img {
+      display: block;
+      border-radius: 50%;
+      max-width: 100%;
+    }
+    p {
+      text-align: center;
+      margin-top: 1em;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
