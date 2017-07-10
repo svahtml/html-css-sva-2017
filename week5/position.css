@@ -1,0 +1,67 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font: 16px arial;
+  background-color: rebeccapurple;
+}
+
+h2 {
+  margin: 0;
+  color: rebeccapurple;
+}
+
+code {
+  background-color: #d9a8ce;
+  padding: 2px 3px;
+  color: rebeccapurple;
+  border-radius: 2px;
+  font-size: .8em;
+}
+
+.wrapper {
+  padding: 2em;
+  min-height: 100vh;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+*::after {
+  font: bold 1em monospace;
+  position: relative;
+  color: rebeccapurple;
+  white-space: no-wrap;
+  display: block;
+}
+
+.static:after {
+  content: "{ position: static; }";
+}
+
+.relative:after {
+  content: "{ position: relative; }";
+}
+
+.absolute:after {
+  content: "{ position: absolute; }";
+}
+
+.fixed:after {
+  content: "{ position: fixed; }";
+}
+
+p[class] {
+  border: 1px solid rebeccapurple;
+  padding: 1em;
+}
+
+p {
+  background-color: #fff;
+}
+
+p + div {
+  background-color: lightgray;
+}
