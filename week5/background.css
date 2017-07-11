@@ -1,0 +1,58 @@
+body {
+  font: 16px arial;
+  background: url(images/grand-canyon.jpg) no-repeat fixed center;
+  background-size: cover;
+}
+
+.wrapper {
+  max-width: 800px;
+  background-color: rgba(255,255,255,.5);
+  padding: 1em;
+  margin: 0 auto;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+}
+
+.bg-example {
+  border: 1px solid black;
+  height: 400px;
+  /*background-color: #bada55;
+  background-image: url(images/tile-back.png);
+  background-repeat: no-repeat;
+  background-position: 20px 140px;*/
+  background: url(images/tile-back.png) no-repeat 20px 40px #bada55;
+}
+
+.multi-bg {
+  margin: 1em 0;
+  width: 550px;
+  height: 250px;
+  background:
+    url(images/sheep.png) no-repeat 100% 95%,
+    url(images/sky.png)
+    ;
+  transition: all 10s;
+}
+
+.multi-bg:hover {
+  background-position: 10% 90%, 100px 0;
+}
+
+ul li {
+  list-style-image: url(images/heart.png);
+}
+
+li a {
+  background: url(images/pdf.jpg) no-repeat right center;
+  padding-right: 20px;
+  color: red;
+  text-decoration: none;
+}
+
+.logo {
+  width: 200px;
+  height: 60px;
+  display: inline-block;
+  background: url(images/sva1.png);
+  text-indent: -999em;
+  vertical-align: middle;
+}

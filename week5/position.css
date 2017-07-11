@@ -31,7 +31,6 @@ code {
 
 *::after {
   font: bold 1em monospace;
-  position: relative;
   color: rebeccapurple;
   white-space: no-wrap;
   display: block;
@@ -65,3 +64,72 @@ p {
 p + div {
   background-color: lightgray;
 }
+
+.static {
+  position: static;
+  top: 30px;
+}
+
+.relative {
+  position: relative;
+  top: 10px;
+  right: 30px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+article {
+  background-color: #bada55;
+}
+
+.nested {
+  height: 400px;
+  background-color: #bada55;
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+  top: 0;
+  right: 100px;
+  left: 100px;
+  margin: 0;
+  z-index: 10;
+}
+
+.fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+/*.overlay {
+  background-color: rgba(0,0,0,.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
