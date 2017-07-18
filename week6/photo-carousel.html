@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Photo Carousel</title>
+
+    <style>
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .photo-carousel {
+        overflow: hidden;
+        width: 800px;
+        height: 500px;
+        position: relative;
+      }
+
+      .photos {
+        transition: all 1s;
+      }
+
+      .caret {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 80px;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 80px;
+        opacity: 0;
+        cursor: pointer;
+        transition: opacity .3s;
+      }
+
+      .caret:hover {
+        opacity: 1;
+      }
+
+      .caret.right {
+        right: 0;
+      }
+
+      .photo-carousel ul {
+        display: flex;
+      }
+
+	  </style>
+    <script src="js/jquery.js"></script>
+
+</head>
+<body>
+
+	<div class="photo-carousel">
+
+		<div class="caret left"><svg width="80" height="80" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M1427 301l-531 531 531 531q19 19 19 45t-19 45l-166 166q-19 19-45 19t-45-19l-742-742q-19-19-19-45t19-45l742-742q19-19 45-19t45 19l166 166q19 19 19 45t-19 45z"/></svg>
+</div>
+		<div class="caret right"><svg width="80" height="80" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path fill="#fff"d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z"/></svg>
+</div>
+
+		<div class="photos">
+			<ul>
+				<li><img src="https://unsplash.it/800/600?image=560" alt=""></li>
+				<li><img src="https://unsplash.it/800/600?image=562" alt=""></li>
+				<li><img src="https://unsplash.it/800/600?image=563" alt=""></li>
+				<li><img src="https://unsplash.it/800/600?image=564" alt=""></li>
+			</ul>
+		</div>
+
+	</div>
+  <script>
+    const photos = document.querySelector('.photos');
+    const clickRight = document.querySelector('.caret.right');
+    const clickleft = document.querySelector('.caret.left');
+    const offSet = photos.querySelector('li').offsetWidth;
+    const total = photos.querySelectorAll('li').length;
+    const start = 0;
+    let pos = 0;
+
+    clickRight.addEventListener('click', function() {
+      if(pos === total) { pos = 0; }
+      photos.style.marginLeft = `-${pos * offSet}px`;
+      pos++;
+    });
+    clickleft.addEventListener('click', function() {
+      if(pos === 0) { pos = 4; }
+      console.log(pos, `-${pos * offSet - offSet}px`)
+      photos.style.marginLeft = `-${(pos * offSet) - offSet}px`;
+      pos--;
+    });
+  </script>
+
+</body>
+</html>

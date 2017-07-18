@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Intro to JS</title>
+	<style>
+		#link {
+			font-size: 3em;
+			color: orange;
+			border: 1px solid black;
+			padding: 1em;
+			transition: all 1s;
+		}
+		.active {
+			background-color: lightblue;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>Intro to JavaScript</h1>
+
+	<button>Click Me</button>
+	<input type="text" id="new-name">
+
+	<ol>
+		<li>Red</li>
+		<li>Yellow</li>
+		<li>Orange</li>
+		<li>Blue</li>
+		<li>Purple</li>
+	</ol>
+
+	<div id="link">Links</div>
+
+	<script>
+		// Single line
+		/* mulit line */
+		// Data types
+		// var intro;
+		const intro = "hello world";
+		console.log(intro);
+		// const - constance : the value can not be changed.
+		// let - the value can be changed (with better scopeing);
+		let change = "goodnight moon";
+		console.log(change);
+		change = "goodday sun";
+		console.log(change);
+		let myBool = true;
+		console.log(myBool);
+		myBool = false;
+		console.log(myBool);
+		// number
+		const myNum = Math.round(1000 * 300 / 3.14);
+		console.log(myNum);
+		// array
+		const myArray = ["a", "b", true, 23];
+		myArray.push(6);
+		myArray.push('A');
+		console.log(myArray[6]);
+		// for loop
+		for(let i = 0;i < myArray.length;i++) {
+			// console.log('Item ' + i + ' has a value of ' + myArray[i]);
+			// console.log(`i = ${i} => ${myArray[i]} [${i+1}] (${myArray.length})`);
+			console.log(i < myArray.length);
+		};
+		// object
+		const person = {
+			name: "Dan",
+			email: "dan@svahtml.com",
+			isCool: false,
+			phoneNumber: 5551234,
+			social: {
+				facebook: 'test123',
+				twitter: '@test1234'
+			}
+		};
+
+		console.log(`<a href="${person.social.twitter}">Twitter</a>`);
+
+		function buildName(funPerson) {
+			return `<a href="${funPerson.social.facebook}">${funPerson.name}</a>`;
+			// return `hello world`;
+		}
+
+		// buildName("hi class");
+		// buildName(person.email);
+
+
+		const students = [
+			{
+				name: "Dan",
+				email: "dan@svahtml.com",
+				isCool: false,
+				phoneNumber: 5551234,
+				social: {
+					facebook: 'test123',
+					twitter: '@test1234'
+				}
+			},
+			{
+				name: "Jim",
+				email: "jim@svahtml.com",
+				isCool: true,
+				phoneNumber: 5554321,
+				social: {
+					facebook: 'test321',
+					twitter: '@test4321'
+				}
+			}
+		];
+
+		// for (var i = 0; i < students.length; i++) {
+		// 	console.log(students[i]);
+		// }
+
+		students.forEach(function(student) {
+			console.log(buildName(student));
+		});
+
+		// let coolStudents = [];
+		//
+		// for (var i = 0; i < students.length; i++) {
+		// 	const current = students[i];
+		// 	if(current.isCool === true) {
+		// 		coolStudents.push(current)
+		// 	}
+		// }
+
+		const linkContainer = document.getElementById('link');
+
+		function displayLinks() {
+			return students.map(student => `<li><a href="mailto:${student.email}">${student.name}</a></li>`).join('')
+		}
+
+		function diplayList() {
+			linkContainer.innerHTML = `<ul>${displayLinks()}</ul>`
+		}
+
+		const coolStudents = students.filter(student => student.isCool === true);
+
+		console.log(coolStudents);
+
+		linkContainer.addEventListener('click', function() {
+			this.classList.toggle('active');
+		})
+
+		const button = document.querySelector('button');
+		button.addEventListener('click', diplayList)
+
+
+		console.dir(button)
+
+
+
+
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Position</title>
+  <link rel="stylesheet" href="position.css">
+</head>
+<body>
+<div class="container">
+  <h1>Basic of Positions</h1>
+
+  <h2>position</h2>
+
+  <p>Elements can be set to one of four types of positions.</p>
+
+  <ul>
+  	<li><code>Static</code> - HTML elements are positioned static by default. A static positioned element is always positioned according to the normal flow of the page.</li>
+  	<li><code>Relative</code> - A relative positioned element is positioned relative to its normal position.</li>
+  	<li><code>Absolute</code> - An absolute position element is positioned relative to the first parent element that has a position other than static. If no such element is found, the containing block is HTML</li>
+  	<li><code>Fixed</code> - An element with fixed position is positioned relative to the browser window. (It will not move even if the window is scrolled)</li>
+  </ul>
+
+  <div class="positionContainer">
+  	<div class="positionElement static">
+  		<h2>Static</h2>
+  	</div>
+  </div>
+
+  <div class="positionContainer">
+  	<div class="positionElement relative">
+  		<h2>Relative</h2>
+  	</div>
+  </div>
+
+  <div class="positionContainer">
+  	<div class="positionElement absolute">
+  		<h2>Absolute</h2>
+  	</div>
+  </div>
+
+  <div class="positionContainer">
+  	<div class="positionElement fixed">
+  		<h2>Fixed</h2>
+  	</div>
+  </div>
+
+  <h2>top, bottom, left, right</h2>
+
+  <p>The location that the position is applied to.  </p>
+
+  <ul>
+  	<li><code>top</code> - auto, length, %, or inherit</li>
+  	<li><code>bottom</code> - auto, length, %, or inherit</li>
+  	<li><code>right</code>  - auto, length, %, or inherit</li>
+  	<li><code>left</code> -  - auto, length, %, or inherit</li>
+  </ul>
+
+  <h2>Nesting Position Elements</h2>
+  <p>If a parent element's position is set to relative than the child elements if position absolute will be limited to the parent elements container.  If the child is set any other position they will display normal.</p>
+
+  <div class="positionContainer nested">
+  	<div class="positionElement absolute">
+  		<h2>Nested</h2>
+  	</div>
+  </div>
+
+
+  <h2>z-index</h2>
+  <p>z-index orders elements vertically on the page.</p>
+
+  <div class="positionContainer zindex">
+  	<div class="positionElement item1">
+  		<h2>z-index 1</h2>
+  	</div>
+
+  	<div class="positionElement item2">
+  		<h2>z-index 2</h2>
+  	</div>
+  </div>
+
+</div>
+<div class="overlay"></div>
+
+</body>
+</html>
